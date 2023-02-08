@@ -86,8 +86,8 @@ section{
 
 .header .top-header .slider .display-left{
     position: Absolute;
-    top: 1px;
-    left: 358px;
+    top: 0.1%;
+    left: 11%;
     background: transparent;
     border: none;
     color: #666;
@@ -96,8 +96,8 @@ section{
 
 .header .top-header .slider .display-right{
     position: Absolute;
-    top: 1px;
-    left: 1535px;
+    top: 0.1%;
+    left: 87%;
     background: transparent;
     border: none;
     color: #666;
