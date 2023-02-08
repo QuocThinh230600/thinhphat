@@ -151,11 +151,13 @@ section{
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border: none;
+    border-radius: 4px;
 } 
 
 .header .main-header .nav ul li .chil-category a{
     color: black;
-    border-bottom: 1px solid #696969;
+    border-bottom: 1px solid #696969;   
     padding: 12px 16px;
     text-decoration: none;
     max-width: 300px;
@@ -169,10 +171,21 @@ section{
 
 .header .main-header .nav ul li .chil-category a:hover{
     background-color: #c6c6c6;
+    border-radius: 4px;
 }
 
 .header .main-header .nav ul .category:hover .chil-category{
     display: block;
+}
+
+.header .main-header .nav ul .category:hover .chil-category::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 70px;
+    border-bottom: 10px solid #f3f3f3;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
 }
 
 .header .main-header .nav ul li i{
@@ -324,12 +337,14 @@ section{
     color: #000;
 }
 
-.page .location .location-info li{
+.page .location .location-info .description-location li{
+    display: block;
     padding: 6px;
     border: 1px solid #000;
     list-style-type: none;
     cursor: pointer;
 }
+
 
 .page .location .location-info li:hover{
     background: #696969;
