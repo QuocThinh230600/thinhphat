@@ -1,32 +1,32 @@
 let search_box = document.querySelector(".search-box");
 let Btn_search_box = document.querySelector(".bx-search");
 
-var slideIndex = 1;
-var header = document.getElementById("myHeader");
+// var slideIndex = 1;
+// var header = document.getElementById("myHeader");
 
-showDivs(slideIndex);
+// showDivs(slideIndex);
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
+// function plusDivs(n) {
+//     showDivs(slideIndex += n);
+// }
 
-function showDivs(n){
-    var x = document.getElementsByClassName("mySlides");
+// function showDivs(n){
+//     var x = document.getElementsByClassName("mySlides");
 
-    if (n > x.length){
-        slideIndex = 1;
-    }
+//     if (n > x.length){
+//         slideIndex = 1;
+//     }
 
-    if (n < 1){
-        slideIndex = x.length;
-    }
+//     if (n < 1){
+//         slideIndex = x.length;
+//     }
 
-    for (var i = 0; i < x.length; i++){
-        x[i].style.display = "none";
-    }
+//     for (var i = 0; i < x.length; i++){
+//         x[i].style.display = "none";
+//     }
 
-    x[slideIndex-1].style.display = "block";
-}
+//     x[slideIndex-1].style.display = "block";
+// }
 
 Btn_search_box.addEventListener("click", ()=>{
     search_box.classList.toggle("show");
