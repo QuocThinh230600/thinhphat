@@ -1,4 +1,7 @@
 var slideIndex = 1;
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -21,4 +24,16 @@ function showDivs(n){
     }
 
     x[slideIndex-1].style.display = "block";
+}
+
+window.onscroll = function(){
+    myFunction();
+}
+
+function myFunction(){
+    if (window.pageYOffset > sticky){
+        header.classList.add("stuck");
+    } else {
+        header.classList.remove("stuck");
+    }
 }
