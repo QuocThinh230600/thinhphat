@@ -1,6 +1,8 @@
+let search_box = document.querySelector(".search-box");
+let Btn_search_box = document.querySelector(".bx-search");
+
 var slideIndex = 1;
 var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
 
 showDivs(slideIndex);
 
@@ -26,14 +28,21 @@ function showDivs(n){
     x[slideIndex-1].style.display = "block";
 }
 
-window.onscroll = function(){
-    myFunction();
-}
+Btn_search_box.addEventListener("click", ()=>{
+    search_box.classList.toggle("show");
+})
 
-function myFunction(){
-    if (window.pageYOffset > sticky){
-        header.classList.add("stuck");
-    } else {
-        header.classList.remove("stuck");
-    }
-}
+// sticky header top
+// var sticky = header.offsetTop;
+
+// window.onscroll = function(){
+//     myFunction();
+// }
+
+// function myFunction(){
+//     if (window.pageYOffset > sticky){
+//         header.classList.add("stuck");
+//     } else {
+//         header.classList.remove("stuck");
+//     }
+// }
