@@ -348,6 +348,16 @@ section{
     font-weight: 700;
 }
 
+.page .content-description .content-seo .title-content{
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+}
+
+.page .content-description .content-seo .description-text{
+    font-size: 16px;
+    text-align: justify;
+}
+
 .page .location.row-12{
     margin-top: 40px;
 }
@@ -476,10 +486,6 @@ section{
     color: #fff;
     text-decoration: none;
     font-size: 16px;
-}
-
-.footer .footer-line1 .list-service ul li a:hover, .footer .footer-line1 .list-infor ul li a:hover{
-    color: #303c72;
 }
 
 .copyright{
