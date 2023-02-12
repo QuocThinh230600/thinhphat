@@ -214,10 +214,6 @@ section{
     border: none;
 }
 
-.header .main-header .nav ul li a:hover, .header .main-header .nav .category:hover .category-list{
-    /* background-color: #000; */
-}
-
 .header .main-header .nav ul li .chil-category a:hover{
     background-color: #c6c6c6;
     /* border-radius: 4px; */
