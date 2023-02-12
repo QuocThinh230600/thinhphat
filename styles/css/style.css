@@ -19,6 +19,50 @@ section{
     margin: auto;
 }
 
+.row{
+    display: flex;
+}
+
+.row-3{
+    display: flex;
+    width: 25%;
+}
+
+.row-6{
+    display: flex;
+    width: 50%;
+}
+
+.row-9{
+    display: flex;
+    width: 75%;
+}
+
+.row-12{
+    display: flex;
+    width: 100%;
+}
+
+.col-3{
+    flex: 25%;
+}
+
+.col-4{
+    flex: 33%;
+}
+
+.col-6{
+    flex: 50%;
+}
+
+.col-9{
+    flex: 75%;
+}
+
+.col-12{
+    flex: 100%;
+}
+
 .header{
     background-color: #222222;
     position: relative;
@@ -510,47 +554,72 @@ section{
     color: #ffffff80;
 }
 
-
-.row{
-    display: flex;
+.page .page-services{
+    padding-top: 20px;
 }
 
-.row-3{
-    display: flex;
-    width: 25%;
+.page-content .title-services{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
 }
 
-.row-6{
-    display: flex;
-    width: 50%;
+.page-content .description-services{
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5rem;
+    text-align: justify;
+    color: #000;
 }
 
-.row-9{
+.conent-post-services{
+    margin-top: 30px;
     display: flex;
-    width: 75%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1200px;
 }
 
-.row-12{
+.conent-post-services .post-services{
+    width: 380px;
+    padding: 20px;
+    margin: 8px;
+    text-align: center;
     display: flex;
+    flex-direction: column;
+}
+
+.conent-post-services .post-services:hover{
+    /* background-color: red; */
+    transition: all ease 0.5s;
+    /* padding: 10px; */
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.conent-post-services .post-services .image-post-services{
+    height: 200px;
     width: 100%;
+    border-radius: 8px;
 }
 
-.col-3{
-    flex: 25%;
+.conent-post-services .post-services .title-post-services{
+    flex: 1;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 12px 0;
 }
 
-.col-4{
-    flex: 33%;
-}
-
-.col-6{
-    flex: 50%;
-}
-
-.col-9{
-    flex: 75%;
-}
-
-.col-12{
-    flex: 100%;
+.conent-post-services .post-services .shot-description-services{
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    margin-top: auto;
 }

@@ -1,5 +1,6 @@
 let search_box = document.querySelector(".search-box");
 let Btn_search_box = document.querySelector(".bx-search");
+let short_description_post = document.querySelector(".shot-description-services");
 
 // var slideIndex = 1;
 // var header = document.getElementById("myHeader");
