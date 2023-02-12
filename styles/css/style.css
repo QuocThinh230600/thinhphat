@@ -329,6 +329,7 @@ section{
 .page .icon-box .title-icon-box .title{
     font-size: 28px;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 .page .icon-box .title-icon-box .description{
@@ -563,6 +564,8 @@ section{
     font-weight: 700;
     margin: 0;
     color: #000;
+    text-transform: uppercase;
+
 }
 
 .page-content .description-services{
@@ -592,7 +595,7 @@ section{
 
 .conent-post-services .post-services:hover{
     /* background-color: red; */
-    transition: all ease 0.5s;
+    transition: all ease 0.2s;
     /* padding: 10px; */
     border-radius: 16px;
     cursor: pointer;
@@ -606,6 +609,7 @@ section{
 }
 
 .conent-post-services .post-services .title-post-services{
+    text-transform: uppercase;
     flex: 1;
     font-size: 18px;
     font-weight: 700;
@@ -623,3 +627,30 @@ section{
     -webkit-line-clamp: 3;
     margin-top: auto;
 }
+
+.pagination {
+    margin-top: 24px;
+    display: inline-block;
+    border: 1px #ddd solid;
+    /* transition: background-color .3s; */
+    border-radius: 50px;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    margin: 8px;
+    padding: 8px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
