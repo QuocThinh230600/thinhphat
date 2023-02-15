@@ -319,9 +319,9 @@ section{
     color: #303c72;
 }
 
-.page .icon-box .title-icon-box .title, .page .icon-box .title-icon-box .description-icon{
-    /* margin: 8px; */
-}
+/* .page .icon-box .title-icon-box .title, .page .icon-box .title-icon-box .description-icon{
+    margin: 8px;
+} */
 
 .page .icon-box .title-icon-box{
     display: flex;
