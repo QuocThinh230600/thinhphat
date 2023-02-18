@@ -6,6 +6,7 @@ let slider_menu = document.querySelector(".slider-menu");
 let close_slider = document.querySelector(".bxs-x-circle");
 let show_chil_menu_mobile = document.querySelectorAll(".arrow");
 let pagination = document.querySelector(".pagination-item");
+let close_remove_class = document.querySelector(".close");
 
 Btn_search_box.addEventListener("click", () => {
     search_box.classList.toggle("show");
@@ -19,6 +20,10 @@ close_slider.addEventListener("click", () => {
     slider_menu.classList.remove("show");
 });
 
+close_remove_class.addEventListener("click", () => {
+    slider_menu.classList.remove("show");
+});
+
 for (var i = 0; i < show_chil_menu_mobile.length; i++) {
     show_chil_menu_mobile[i].addEventListener("click", (e) => {
         let arrowParent = e.target.parentElement.parentElement;
@@ -28,106 +33,7 @@ for (var i = 0; i < show_chil_menu_mobile.length; i++) {
 }
 
 // pagination > news
-const paginationNumbers = document.getElementById("pagination-numbers");
-const paginatedList = document.getElementById("paginated-list");
-const listItems = paginatedList.querySelectorAll(".post-services");
-const nextButton = document.getElementById("next-button");
-const prevButton = document.getElementById("prev-button");
 
-const paginationLimit = 9;
-const pageCount = Math.ceil(listItems.length / paginationLimit);
-
-let currentPage = 1;
-
-const disableButton = (button) => {
-    button.classList.add("disabled");
-    button.setAttribute("disabled", true);
-};
-
-const enableButton = (button) => {
-    button.classList.remove("disabled");
-    button.removeAttribute("disabled");
-};
-
-const handlePageButtonsStatus = () => {
-    if (currentPage === 1) {
-        disableButton(prevButton);
-    } else {
-        enableButton(prevButton);
-    }
-
-    if (pageCount === currentPage) {
-        disableButton(nextButton);
-    } else {
-        enableButton(nextButton);
-    }
-};
-
-const handleActivePageNumber = () => {
-    document.querySelectorAll(".pagination-number").forEach((button) => {
-        button.classList.remove("active");
-        const pageIndex = Number(button.getAttribute("page-index"));
-        if (pageIndex == currentPage) {
-            button.classList.add("active");
-        }
-    });
-};
-
-const appendPageNumber = (index) => {
-    const pageNumber = document.createElement("button");
-    pageNumber.className = "pagination-number";
-    pageNumber.innerHTML = index;
-    pageNumber.setAttribute("page-index", index);
-    pageNumber.setAttribute("aria-label", "Page " + index);
-
-    paginationNumbers.appendChild(pageNumber);
-};
-
-const getPaginationNumbers = () => {
-    for (let i = 1; i <= pageCount; i++) {
-        appendPageNumber(i);
-    }
-};
-
-const setCurrentPage = (pageNum) => {
-    currentPage = pageNum;
-
-    handleActivePageNumber();
-    handlePageButtonsStatus();
-
-    const prevRange = (pageNum - 1) * paginationLimit;
-    const currRange = pageNum * paginationLimit;
-
-    listItems.forEach((item, index) => {
-        item.classList.add("hidden");
-        if (index >= prevRange && index < currRange) {
-            item.classList.remove("hidden");
-        }
-    });
-};
-
-window.addEventListener("load", () => {
-    getPaginationNumbers();
-    setCurrentPage(1);
-
-    prevButton.addEventListener("click", () => {
-        setCurrentPage(currentPage - 1);
-    });
-
-    nextButton.addEventListener("click", () => {
-        setCurrentPage(currentPage + 1);
-    });
-
-    document.querySelectorAll(".pagination-number").forEach((button) => {
-        const pageIndex = Number(button.getAttribute("page-index"));
-
-        if (pageIndex) {
-            button.addEventListener("click", () => {
-                setCurrentPage(pageIndex);
-            });
-        }
-    });
-});
 
 // sticky header top
 // var sticky = header.offsetTop;
