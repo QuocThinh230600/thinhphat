@@ -1,0 +1,31 @@
+#header {
+  margin: 0;
+}
+
+.navbar ul.menu {
+  list-style: none;
+}
+.navbar ul.menu li {
+  padding: 5px;
+}
+.navbar ul.menu li a {
+  text-decoration: none;
+}
+
+body {
+  margin: auto;
+}
+
+.container {
+  display: flex;
+}
+.container .sidebar-1 {
+  background-color: red;
+  width: 300px;
+}
+.container .sidebar-2 {
+  background-color: blue;
+  width: calc(100% - 300px);
+}
+
+/*# sourceMappingURL=style.css.map */

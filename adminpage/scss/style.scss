@@ -1,0 +1,36 @@
+@import 'header';
+@import 'body';
+@import 'footer';
+
+
+.navbar {
+    ul.menu {
+        list-style: none;
+
+        li {
+            padding: 5px;
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+body{
+    margin: auto;
+}
+
+.container{
+    display: flex;
+
+    .sidebar-1{
+        background-color: red;
+        width: 300px;
+    }
+
+    .sidebar-2{
+        background-color: blue;
+        width: calc(100% - 300px);
+    }
+}
