@@ -1,36 +1,23 @@
 @import 'header';
 @import 'body';
 @import 'footer';
+@import 'page';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
-.navbar {
-    ul.menu {
-        list-style: none;
-
-        li {
-            padding: 5px;
-
-            a {
-                text-decoration: none;
-            }
-        }
-    }
-}
-
-body{
-    margin: auto;
+*{
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
     display: flex;
 
-    .sidebar-1{
-        background-color: red;
-        width: 300px;
-    }
+    @import 'sidebar-1';
 
-    .sidebar-2{
-        background-color: blue;
+    @import 'sidebar-2';
+
+    .sidebar-1 ~ .sidebar-2{
+        left: 300px;
         width: calc(100% - 300px);
     }
 }
+
