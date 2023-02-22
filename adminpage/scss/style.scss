@@ -8,6 +8,28 @@
     font-family: 'Roboto', sans-serif;
 }
 
+:root{
+    /* ==== color ==== */
+    --body-color: #e4e9f7;
+    --sidebar-color: #f3f3f3;
+    --sidebar-item-color: #fff;
+    --sidebar-item-color-hover: #ffffff80;
+    --sidebar-chil-item-color-hover: #92c3e5;
+    --border: 1px solid #fff;
+    --hr-border: 1px solid #ffffff80;
+    --primary-color: #008000;
+    --primary-color-light: #f3f3f3;
+    --toggle-color: #ddd;
+    --text-color: #000;
+
+    /* ==== transition ==== */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+
 .container{
     display: flex;
 
@@ -20,4 +42,6 @@
         width: calc(100% - 300px);
     }
 }
+
+
 
