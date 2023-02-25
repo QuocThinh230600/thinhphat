@@ -4,6 +4,8 @@ const body = document.querySelector("body"),
       modeSwitch = body.querySelector(".toggle-switch"),
       modeText = body.querySelector(".mode-text");
 
+let breadcrumb_dashboard = document.querySelector(".breadcrumb-item");
+
 
 function hasClass(ele, cls){
     return ('' + ele.className + '').indexOf('' + cls + '') > -1;   

@@ -148,13 +148,15 @@
                                 transition: var(--tran-03);   
                             }
     
-                            i{
-                                position: absolute;
-                            }  
-    
                             i.sun{
+                                position: relative;
+                                right: 30px;
                                 opacity: 0;
                                 transition: var(--tran-03);
+                            }
+                            i.moon{
+                                // position: relative;
+                                // left: 20px;
                             }
                         }
     
